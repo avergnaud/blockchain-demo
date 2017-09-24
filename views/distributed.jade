@@ -5,7 +5,7 @@ block content
     h1 #{__('Blockchain distribuée')}
     - var peers = {1: 'A', 2: 'B', 3: 'C'}
     - each peer, chain in peers
-      h3 #{__('Peer')} #{peer}
+      h3 #{__('Mineur')} #{peer}
       .row.row-horizon
         - var blocks = []
         - blocks.push({block: 1, chain: chain, nonce: 11316, previous: '0000000000000000000000000000000000000000000000000000000000000000'})

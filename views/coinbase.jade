@@ -5,14 +5,14 @@ block content
     h1 #{__('Blockchain - registre de transactions distribué et infalsifiable')}
     - var peers = {1: 'A', 2: 'B', 3: 'C'}
     - each peer, chain in peers
-      h3 #{__('Peer')} #{peer}
+      h3 #{__('Mineur')} #{peer}
       .row.row-horizon
         - var blocks = []
         - blocks.push({block: 1, chain: chain, nonce: 68048, coinbasevalue: '100.00', coinbaseto: 'Satoshi', txs: [], previous: '0000000000000000000000000000000000000000000000000000000000000000'})
         - blocks.push({block: 2, chain: chain, nonce: 86115, coinbasevalue: '100.00', coinbaseto: 'Satoshi', txs: [{value: '10.00', from: 'Satoshi', to: 'Sophie'},{value: '20.00', from: 'Satoshi', to: 'Yannick'},{value: '15.00', from: 'Satoshi', to: 'Karim'},{value: '15.00', from: 'Satoshi', to: 'Céline'}], previous: '00002d71a868998b4f4b9ae5b952238b5206b296d423ca262620a198ab131a84'})
-        - blocks.push({block: 3, chain: chain, nonce: 23511, coinbasevalue: '100.00', coinbaseto: 'Satoshi', txs: [{value: '10.00', from: 'Karim', to: 'Adrien'},{value: '5.00', from: 'Céline', to: 'Adrien'},{value: '20.00', from: 'Yannick', to: 'Grace'}], previous: '0000e554367839fc4b1f4d247f1c3250a0a24f48a6ed7daae8dacbb81a6e0806'})
-        - blocks.push({block: 4, chain: chain, nonce: 5697, coinbasevalue: '100.00', coinbaseto: 'Satoshi', txs: [{value: '15.00', from: 'Adrien', to: 'Ryan'},{value: '5.00', from: 'Karim', to: 'Céline'},{value: '8.00', from: 'Sophie', to: 'Adrien'}], previous: '0000d60018d26037e685d23f666d683b7ee18d8e12449a246767b09e669f0f94'})
-        - blocks.push({block: 5, chain: chain, nonce: 22263, coinbasevalue: '100.00', coinbaseto: 'Sophie', txs: [{value: '2.00', from: 'Adrien', to: 'Alexander'},{value: '6.00', from: 'Ryan', to: 'Carter'},{value: '4.00', from: 'Ryan', to: 'Riley'},{value: '9.95', from: 'Grace', to: 'Katherine'}], previous: '0000774c664cfd7b0a4696892f0d2bab9d3abb0b70eafe9daae1602856f7e683'})
+        - blocks.push({block: 3, chain: chain, nonce: 65312, coinbasevalue: '100.00', coinbaseto: 'Satoshi', txs: [{value: '10.00', from: 'Karim', to: 'Adrien'},{value: '5.00', from: 'Céline', to: 'Adrien'},{value: '20.00', from: 'Yannick', to: 'Benoit'}], previous: '0000e554367839fc4b1f4d247f1c3250a0a24f48a6ed7daae8dacbb81a6e0806'})
+        - blocks.push({block: 4, chain: chain, nonce: 8245, coinbasevalue: '100.00', coinbaseto: 'Satoshi', txs: [{value: '15.00', from: 'Adrien', to: 'Stéphane'},{value: '5.00', from: 'Karim', to: 'Céline'},{value: '8.00', from: 'Sophie', to: 'Adrien'}], previous: '0000e4a80815888752d0eb3485f867787ee0664657707372003bde5c041d4a8d'})
+        - blocks.push({block: 5, chain: chain, nonce: 81110, coinbasevalue: '100.00', coinbaseto: 'Sophie', txs: [{value: '2.00', from: 'Adrien', to: 'Alain'},{value: '6.00', from: 'Stéphane', to: 'Christopher'},{value: '4.00', from: 'Stéphane', to: 'Djilali'},{value: '9.95', from: 'Benoit', to: 'Patricia'}], previous: '0000345f0bc2781b2ecc4cfd47546ff0a14e8cdc11a89371c45a0801990c9bf4'})
         each block in blocks
           .col-xs-7
             include includes/coinbaseblock.jade
